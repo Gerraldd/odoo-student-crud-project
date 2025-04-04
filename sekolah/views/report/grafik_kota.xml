@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <record id="grafik_kota_view_graph" model="ir.ui.view">
+            <field name="name">Grafik Kota</field>
+            <field name="model">sekolah.property</field>
+            <field name="arch" type="xml">
+                <graph string="Grafik Kota" type="bar">
+                    <field name="city_id" type="row" />
+                    <field name="id" type="measure" />
+                </graph>
+            </field>
+        </record>
+        <record id="grafik_kota_action" model="ir.actions.act_window">
+            <field name="name">Grafik Kota</field>
+            <field name="res_model">sekolah.property</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="grafik_kota_view_graph"/>
+        </record>
+    </data>
+</odoo>

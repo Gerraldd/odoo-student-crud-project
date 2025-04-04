@@ -1,0 +1,8 @@
+<odoo>
+    <menuitem id="sekolah_menu_root" name="Manajemen Data Sekolah">
+        <menuitem id="sekolah_data_siswa_menu" name="Data Siswa" action="sekolah_property_action"/>
+        <menuitem id="sekolah_data_kota_menu" name="Data Kota" action="sekolah_kota_action"/>
+        <menuitem id="grafik_kelahiran_siswa_menu" name="Grafik Kelahiran Siswa" action="grafik_kelahiran_action"/>
+        <menuitem id="grafik_kota_menu" name="Grafik Kota Siswa" action="grafik_kota_action"/>
+    </menuitem>
+</odoo>

@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+        <record id="sekolah_property_view_search" model="ir.ui.view">
+            <field name="name">Sekolah Property Search</field>
+            <field name="model">sekolah.property</field>
+            <field name="arch" type="xml">
+                <search string="Tests">
+                    <!-- Filter Pencarian -->
+                    <filter name="Asal Sekolah Is Set" domain="[('school', '!=', False)]" />
+                    <filter name="Umur di atas 15-16" domain="[('age', '&gt;=', 15), ('age', '&lt;=', 16)]"/>
+                    <filter name="Laki-Laki" domain="[('gender', '=', 'laki-laki')]" />
+                    <filter name="Perempuan" domain="[('gender', '=', 'perempuan')]" />
+                    <filter name="Lahir di bulan November" domain="[('birth_day', '=like', '%-11-%')]" />
+
+                    <!-- Field Pencarian -->
+                    <field name="name" />
+                    <field name="nis" />
+                    <field name="school" /> 
+                    <field name="city_id" /> 
+                </search>
+            </field>
+        </record>
+        <record id="sekolah_property_view_tree" model="ir.ui.view">
+            <field name="name">Sekolah Property List</field>
+            <field name="model">sekolah.property</field>
+            <field name="arch" type="xml">
+                <tree string="Sekolah Property List">
+                    <field name="nis" />
+                    <field name="name" />
+                    <field name="city_id" />
+                    <field name="birth_day" />
+                    <field name="age" />
+                    <field name="school" />
+                    <field name="gender" />
+                </tree>
+            </field>
+        </record>
+        <record id="sekolah_property_view_form" model="ir.ui.view">
+            <field name="name">sekolah.property.list</field>
+            <field name="model">sekolah.property</field>
+            <field name="arch" type="xml">
+                <form string="Test">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="city_id" />
+                            <field name="birth_day" />
+                            <field name="nis" />
+                            <field name="age" />
+                            <field name="school" />
+                            <field name="gender" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="sekolah_property_action" model="ir.actions.act_window">
+            <field name="name">Data Siswa</field>
+            <field name="res_model">sekolah.property</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

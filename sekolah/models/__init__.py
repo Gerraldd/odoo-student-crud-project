@@ -1,0 +1,1 @@
+from . import sekolah_property,sekolah_kota

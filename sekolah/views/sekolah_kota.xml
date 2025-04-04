@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="sekolah_kota_view_tree" model="ir.ui.view">
+            <field name="name">Data Kota</field>
+            <field name="model">sekolah.kota</field>
+            <field name="arch" type="xml">
+                <tree string="Data Kota List">
+                    <field name="name" />
+                    <field name="city_ids" />
+                </tree>
+            </field>
+        </record>
+        <record id="sekolah_kota_action" model="ir.actions.act_window">
+            <field name="name">Data Kota</field>
+            <field name="res_model">sekolah.kota</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
