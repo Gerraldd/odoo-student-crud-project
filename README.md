@@ -1,4 +1,4 @@
-# Project CRUD Data Siswa (Odoo 16)
+# Project CRUD Data Siswa (Odoo 17)
 
 Project ini dibuat sebagai bagian dari tugas PKL untuk magang di Universal Big Data, menggunakan framework Odoo dan Python.
 
